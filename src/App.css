@@ -1,38 +1,45 @@
 .App {
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  height: 50vh;
+}
+
+#form {
+  width: 100%;
+}
+
+#form-output {
+  padding: 20px;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.form__row, .output__row {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+}
+
+.form__row {
+  margin-bottom: 20px;
+}
+
+.form__description, .output__item {
+  width: 20%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form__description {
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.delete-item {
+  color: red;
+  cursor: pointer;
 }
