@@ -8,7 +8,8 @@ export default class TrueDB {
     static set(date, km) {
         const db = JSON.parse(localStorage.getItem('trainings')) || [];
         if (this.has(date)) {
-            db[db.indexOf(this.get(date))].km += +km;
+            const el = db.find((item) => item.date === date);
+            el.km += +km;
         } else {
             db.push({date, km: +km });
         }
